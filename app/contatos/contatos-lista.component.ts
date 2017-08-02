@@ -11,4 +11,4 @@ templateUrl: 'contatos-lista.component.html'
 
 export class ContatosListaComponent{
 
-s
+}
