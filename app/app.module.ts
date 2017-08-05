@@ -4,9 +4,12 @@ import { AppComponent } from './app.component';
 import { ContatosModule } from './contatos/contatos.module';
 
 @NgModule({
-    imports: [BrowserModule, ContatosModule],
+    imports: [
+        BrowserModule,
+        ContatosModule
+    ],
     declarations: [AppComponent],
     bootstrap: [AppComponent]
-})
+    })
 
 export class AppModule { }

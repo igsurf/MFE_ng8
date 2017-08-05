@@ -1,14 +1,12 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
-moduleId: module.id,
-selector: 'contatos-lista',
-templateUrl: 'contatos-lista.component.html'
+    moduleId: module.id,
+    selector: 'contatos-lista',
+    templateUrl: 'contatos-lista.component.html'
 
 
 })
 
-export class ContatosListaComponent{
-
-}
+export class ContatosListaComponent { }
