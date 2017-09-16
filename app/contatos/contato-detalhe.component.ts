@@ -1,12 +1,13 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
+    
     moduleId: module.id,
     selector: 'contato-detalhe',
-    templateUrl : 'contato-detalhe.component.html'
+    templateUrl: 'contato-detalhe.component.html'
 })
 
 
 
-export class ContatoDetalhe {}
+export class ContatoDetalheComponent { }

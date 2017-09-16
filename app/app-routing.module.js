@@ -6,14 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const core_1 = require("@angular/core");
-let ContatoDetalheComponent = class ContatoDetalheComponent {
+const router_1 = require("@angular/router");
+const appRoutes = [
+    {
+        path: '',
+        redirectTo: '/contato',
+        pathMatch: 'full'
+    }
+];
+let AppRoutingModule = class AppRoutingModule {
 };
-ContatoDetalheComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'contato-detalhe',
-        templateUrl: 'contato-detalhe.component.html'
+AppRoutingModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            router_1.RouterModule.forRoot(appRoutes)
+        ]
     })
-], ContatoDetalheComponent);
-exports.ContatoDetalheComponent = ContatoDetalheComponent;
-//# sourceMappingURL=contato-detalhe.component.js.map
+], AppRoutingModule);
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=app-routing.module.js.map
