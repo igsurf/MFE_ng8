@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 const core_1 = require("@angular/core");
 const contatos_lista_component_1 = require("./contatos-lista.component");
 const common_1 = require("@angular/common");
+const contato_detalhe_component_1 = require("./contato-detalhe.component");
 let ContatosModule = class ContatosModule {
 };
 ContatosModule = __decorate([
@@ -16,7 +17,8 @@ ContatosModule = __decorate([
             common_1.CommonModule
         ],
         declarations: [
-            contatos_lista_component_1.ContatosListaComponent
+            contatos_lista_component_1.ContatosListaComponent,
+            contato_detalhe_component_1.ContatoDetalheComponent
         ],
         exports: [
             contatos_lista_component_1.ContatosListaComponent
