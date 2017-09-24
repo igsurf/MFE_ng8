@@ -10,7 +10,7 @@ const router_1 = require("@angular/router");
 const appRoutes = [
     {
         path: '',
-        redirectTo: '/contato',
+        redirectTo: 'contato',
         pathMatch: 'full'
     }
 ];
