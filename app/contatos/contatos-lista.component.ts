@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { CONTATOS } from './contatos.mock';
+import { Component, OnInit } from '@angular/core';
+
 import {Contato} from './contato.model';
+import { ContatoService } from './contato.service';
 
 
 @Component({
@@ -11,9 +12,17 @@ import {Contato} from './contato.model';
 
 })
 
-export class ContatosListaComponent {
+export class ContatosListaComponent implements OnInit {
 
 
-    contatos : Contato[] = CONTATOS;
+    contatos : Contato[];
+
+    constructor(private contatoService: ContatoService) {
+        
+    }
+
+    ngOnInit(): void {
+      this.contatos = this.contatoService.getContatos();
+    }
 
  }

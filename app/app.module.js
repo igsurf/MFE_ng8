@@ -20,7 +20,7 @@ AppModule = __decorate([
             app_routing_module_1.AppRoutingModule
         ],
         declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        bootstrap: [app_component_1.AppComponent],
     })
 ], AppModule);
 exports.AppModule = AppModule;
