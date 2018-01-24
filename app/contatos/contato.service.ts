@@ -3,13 +3,12 @@ import { Contato } from './contato.model';
 import { CONTATOS } from './contatos.mock';
 
 
-@Injectable({
-    
-})
+@Injectable()
 export class ContatoService {
 
-    getContatos(): Contato[] {
-        return CONTATOS;
+    getContatos(): Promise<Contato[]> {
+        Promise.resolve.resolve(CONTATOS);
+        
     }
 
 }

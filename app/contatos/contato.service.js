@@ -9,11 +9,11 @@ const core_1 = require("@angular/core");
 const contatos_mock_1 = require("./contatos.mock");
 let ContatoService = class ContatoService {
     getContatos() {
-        return contatos_mock_1.CONTATOS;
+        Promise.resolve.resolve(contatos_mock_1.CONTATOS);
     }
 };
 ContatoService = __decorate([
-    core_1.Injectable({})
+    core_1.Injectable()
 ], ContatoService);
 exports.ContatoService = ContatoService;
 //# sourceMappingURL=contato.service.js.map
