@@ -7,7 +7,7 @@ import { CONTATOS } from './contatos.mock';
 export class ContatoService {
 
     getContatos(): Promise<Contato[]> {
-        Promise.resolve.resolve(CONTATOS);
+       return Promise.resolve(CONTATOS);          
         
     }
 
