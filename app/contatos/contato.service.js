@@ -11,6 +11,11 @@ let ContatoService = class ContatoService {
     getContatos() {
         return Promise.resolve(contatos_mock_1.CONTATOS);
     }
+    getContatosSlowly() {
+        return new Promise((resolve, reject) => {
+            setTimeout(resolve, 3000);
+        });
+    }
 };
 ContatoService = __decorate([
     core_1.Injectable()

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {Contato} from './contato.model';
 import { ContatoService } from './contato.service';
+import { error } from 'util';
 
 
 @Component({
@@ -25,8 +26,7 @@ export class ContatosListaComponent implements OnInit {
       this.contatoService.getContatos()
       .then((contatos: Contato[]) => {
           this.contatos = contatos;
-      })
-      .catch(err => console.log(err));
+      }).catch(error => console.log(error))
     }
 
  }
