@@ -23,7 +23,7 @@ export class ContatosListaComponent implements OnInit {
     }
 
     ngOnInit(): void {
-      this.contatoService.getContatos()
+      this.contatoService.getContatosSlowly()
       .then((contatos: Contato[]) => {
           this.contatos = contatos;
       }).catch(error => console.log(error))
