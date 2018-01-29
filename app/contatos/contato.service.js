@@ -30,6 +30,7 @@ let ContatoService = class ContatoService {
             });
         })
             .then(() => {
+            console.log("Bla bla");
             return this.getContatos();
         });
     }

@@ -16,6 +16,7 @@ import { Contato } from './contato.model';
 
 
 export class ContatoDetalheComponent implements OnInit {
+    private contato: Contato;
 
     constructor(
         private contatoService: ContatoService,
@@ -23,13 +24,15 @@ export class ContatoDetalheComponent implements OnInit {
         private location: Location
     ) { }
     ngOnInit(): void {
+        this.contato = new Contato(0, '', '', '');
         console.log('ng oninit');
         this.route.params.forEach((params: Params) => {
             let id: number = +params['id'];
             console.log(typeof id);
             this.contatoService.getContato(id)
                 .then((contato: Contato) => {
-                    console.log(contato)
+                   this.contato = contato;
+                   console.log(contato);
                 })
         })
     }

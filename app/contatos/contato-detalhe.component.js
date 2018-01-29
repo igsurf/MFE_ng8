@@ -12,6 +12,7 @@ const core_1 = require("@angular/core");
 const contato_service_1 = require("./contato.service");
 const router_1 = require("@angular/router");
 const common_1 = require("@angular/common");
+const contato_model_1 = require("./contato.model");
 let ContatoDetalheComponent = class ContatoDetalheComponent {
     constructor(contatoService, route, location) {
         this.contatoService = contatoService;
@@ -19,12 +20,14 @@ let ContatoDetalheComponent = class ContatoDetalheComponent {
         this.location = location;
     }
     ngOnInit() {
+        this.contato = new contato_model_1.Contato(0, '', '', '');
         console.log('ng oninit');
         this.route.params.forEach((params) => {
             let id = +params['id'];
             console.log(typeof id);
             this.contatoService.getContato(id)
                 .then((contato) => {
+                this.contato = contato;
                 console.log(contato);
             });
         });
