@@ -32,6 +32,10 @@ let ContatoDetalheComponent = class ContatoDetalheComponent {
             });
         });
     }
+    testeContato(form) {
+        console.log('entrou');
+        console.log(form);
+    }
 };
 ContatoDetalheComponent = __decorate([
     core_1.Component({

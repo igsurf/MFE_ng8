@@ -16,7 +16,7 @@ import { Contato } from './contato.model';
 
 
 export class ContatoDetalheComponent implements OnInit {
-    private contato: Contato;
+    public contato: Contato;
 
     constructor(
         private contatoService: ContatoService,
@@ -31,10 +31,15 @@ export class ContatoDetalheComponent implements OnInit {
             console.log(typeof id);
             this.contatoService.getContato(id)
                 .then((contato: Contato) => {
-                   this.contato = contato;
-                   console.log(contato);
+                    this.contato = contato;
+                    console.log(contato);
                 })
         })
+    }
+
+    testeContato(form): void {
+        console.log('entrou');  
+         console.log(form);
     }
 
 }
