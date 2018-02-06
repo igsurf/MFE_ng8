@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Contato } from "./contato.model";
 import { CONTATOS } from "./contatos.mock";
+import { Observable } from "rxjs";
 
 @Injectable()
 
@@ -30,5 +31,10 @@ export class ContatoService {
                 console.log("Bla bla")
                 return this.getContatos();
             })
+    }
+
+    search(term: string): Observable<Contato[]>{
+        return this.http
+        .get(`${this.contatosUrl}/?nome=${term}`)
     }
 }

@@ -12,6 +12,7 @@ const contato_routing_module_1 = require("./contato-routing.module");
 const contato_detalhe_component_1 = require("./contato-detalhe.component");
 const contato_service_1 = require("./contato.service");
 const forms_1 = require("@angular/forms");
+const contato_busca_component_1 = require("./contato-busca.component");
 let ContatosModule = class ContatosModule {
 };
 ContatosModule = __decorate([
@@ -23,9 +24,11 @@ ContatosModule = __decorate([
         ],
         declarations: [
             contatos_lista_component_1.ContatosListaComponent,
-            contato_detalhe_component_1.ContatoDetalheComponent
+            contato_detalhe_component_1.ContatoDetalheComponent,
+            contato_busca_component_1.ContatoBuscaComponent
         ],
         exports: [
+            contato_busca_component_1.ContatoBuscaComponent,
             contatos_lista_component_1.ContatosListaComponent
         ],
         providers: [contato_service_1.ContatoService]

@@ -10,7 +10,15 @@ import { Contato } from './contato.model';
 
     moduleId: module.id,
     selector: 'contato-detalhe',
-    templateUrl: 'contato-detalhe.component.html'
+    templateUrl: 'contato-detalhe.component.html',
+    styles: [`
+        .ng-valid[required] {
+            border: 2px solid green;
+        }
+        .ng-invalid:not(form) {
+            border: 2px solid red;
+        }
+    `]
 })
 
 
@@ -35,6 +43,10 @@ export class ContatoDetalheComponent implements OnInit {
                    console.log(contato);
                 })
         })
+    }
+
+    testeContato(form): void{
+        console.log(form)
     }
 
 }

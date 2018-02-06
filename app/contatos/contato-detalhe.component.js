@@ -32,12 +32,23 @@ let ContatoDetalheComponent = class ContatoDetalheComponent {
             });
         });
     }
+    testeContato(form) {
+        console.log(form);
+    }
 };
 ContatoDetalheComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'contato-detalhe',
-        templateUrl: 'contato-detalhe.component.html'
+        templateUrl: 'contato-detalhe.component.html',
+        styles: [`
+        .ng-valid[required] {
+            border: 2px solid green;
+        }
+        .ng-invalid:not(form) {
+            border: 2px solid red;
+        }
+    `]
     }),
     __metadata("design:paramtypes", [contato_service_1.ContatoService,
         router_1.ActivatedRoute,
