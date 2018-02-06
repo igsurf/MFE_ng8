@@ -45,14 +45,9 @@ export class ContatoDetalheComponent implements OnInit {
         })
     }
 
-<<<<<<< HEAD
-    testeContato(form): void{
-        console.log(form)
-=======
     testeContato(form): void {
         console.log('entrou');  
          console.log(form);
->>>>>>> 98241fe21d7f27f2810a7d115fdd2a70ac312b97
     }
 
 }
