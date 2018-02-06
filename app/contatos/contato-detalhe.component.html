@@ -2,11 +2,11 @@
 
     <h2>Salvar Contato</h2>
 
-    <form #formContato="ngForm">
+    <form #contatoForm="ngForm">
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" placeholder="Insira o nome" 
-            required
+            <input type="text" class="form-control" placeholder="Insira o nome"
+            required 
             name="nome"
             [(ngModel)]="contato.nome">
 
@@ -26,9 +26,9 @@
             required [(ngModel)]="contato.telefone" >
 
         </div>
-        <button type="submit" class="btn btn-success" [disabled]="formContato.form.valid">Salvar</button>
+        <button type="submit" class="btn btn-success" [disabled]="!contatoForm.form.valid">Salvar</button>
         <a class="btn btn-secondary" routerLink="/">Voltar</a>
     </form>
-    <button (click)=¨testeContato(formContato)¨ class="btn btn-warning">Log</button>
+    <button (click)='testeContato(contatoForm)' class="btn btn-warning">Log</button>
 
 </div>

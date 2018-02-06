@@ -33,6 +33,10 @@ let ContatoDetalheComponent = class ContatoDetalheComponent {
         });
     }
     testeContato(form) {
+<<<<<<< HEAD
+=======
+        console.log('entrou');
+>>>>>>> 98241fe21d7f27f2810a7d115fdd2a70ac312b97
         console.log(form);
     }
 };
