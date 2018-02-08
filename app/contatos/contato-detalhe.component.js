@@ -18,6 +18,7 @@ let ContatoDetalheComponent = class ContatoDetalheComponent {
         this.contatoService = contatoService;
         this.route = route;
         this.location = location;
+        this.isNew = true;
     }
     ngOnInit() {
         this.contato = new contato_model_1.Contato(0, '', '', '');
@@ -31,6 +32,17 @@ let ContatoDetalheComponent = class ContatoDetalheComponent {
                 console.log(contato);
             });
         });
+    }
+    onSubmit() {
+        let promise;
+        if (this.isNew) {
+            console.log();
+            promise = this.contatoService.create(this.contato);
+        }
+        else {
+            console.log('Contato sofreu alterações');
+        }
+        promise.then(contato => this.location.back());
     }
     testeContato(form) {
         console.log('entrou');

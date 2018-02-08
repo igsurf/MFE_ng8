@@ -25,12 +25,14 @@ import { Contato } from './contato.model';
 
 export class ContatoDetalheComponent implements OnInit {
     public contato: Contato;
+    private isNew: boolean = true;
 
     constructor(
         private contatoService: ContatoService,
         private route: ActivatedRoute,
         private location: Location
     ) { }
+
     ngOnInit(): void {
         this.contato = new Contato(0, '', '', '');
         console.log('ng oninit');
@@ -45,9 +47,24 @@ export class ContatoDetalheComponent implements OnInit {
         })
     }
 
+    onSubmit(): void {
+        let promise;
+
+        if (this.isNew){
+            console.log();
+            promise = this.contatoService.create(this.contato);
+        }
+        else {
+            console.log('Contato sofreu alterações');
+        }
+
+        promise.then(contato => this.location.back());
+
+    }
+
     testeContato(form): void {
-        console.log('entrou');  
-         console.log(form);
+        console.log('entrou');
+        console.log(form);
     }
 
 }
