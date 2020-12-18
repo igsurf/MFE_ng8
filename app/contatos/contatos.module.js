@@ -20,7 +20,8 @@ ContatosModule = __decorate([
         imports: [
             common_1.CommonModule,
             contato_routing_module_1.ContatoRoutingModule,
-            forms_1.FormsModule
+            forms_1.FormsModule,
+            forms_1.ReactiveFormsModule
         ],
         declarations: [
             contatos_lista_component_1.ContatosListaComponent,

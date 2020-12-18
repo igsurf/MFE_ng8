@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Params } from '@angular/router';
 import { Contato } from './contato.model';
+import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 
 @Component({
